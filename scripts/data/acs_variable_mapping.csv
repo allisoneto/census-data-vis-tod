@@ -1,0 +1,53 @@
+variable,human_readable_name,table_topic,transformations,denominator,pie_group
+B01001_001E,Total population,Demographics,count|per_aland,,
+B01002_001E,Median age,Demographics,raw,,
+B19013_001E,Median household income,Income,raw,,
+B17001_002E,Income below poverty (count),Poverty,count|proportion,B17001_001E,
+B17001_001E,Population for poverty denominator,Poverty,count,,
+B25001_001E,Total housing units,Housing,count|per_population|per_aland,,
+B25077_001E,Median home value,Housing,raw,,
+B25064_001E,Median gross rent,Housing,raw,,
+B25003_002E,Owner-occupied units,Housing,count|proportion,B25001_001E,
+B25003_003E,Renter-occupied units,Housing,count|proportion,B25001_001E,
+B23025_002E,In labor force,Employment,count|proportion,B01001_001E,
+B23025_005E,Employed,Employment,count|proportion,B23025_002E,
+B08301_001E,Workers (commuters),Commuting,count,,
+B08301_003E,Drove alone,Commuting,count|proportion,B08301_001E,
+B08301_010E,Public transit,Commuting,count|proportion,B08301_001E,
+B08301_017E,Bicycle,Commuting,count|proportion,B08301_001E,
+B08301_018E,Walked,Commuting,count|proportion,B08301_001E,
+B08301_019E,Worked from home,Commuting,count|proportion,B08301_001E,
+B08303_001E,Mean commute time (minutes),Commuting,raw,,
+B25044_003E,Owner-occupied units with no vehicle,Vehicle ownership,count|proportion,B25044_002E,
+B25044_010E,Renter-occupied units with no vehicle,Vehicle ownership,count|proportion,B25044_009E,
+B25044_004E,Owner-occupied units with 1 vehicle,Vehicle ownership,count|proportion,B25044_002E,
+B25044_011E,Renter-occupied units with 1 vehicle,Vehicle ownership,count|proportion,B25044_009E,
+B25070_001E,Gross rent as pct of income - total,Housing cost burden,,,
+B25070_007E,Rent 30-34.9% of income,Housing cost burden,pie_group,B25070_001E,housing_cost_burden
+B25070_008E,Rent 35-39.9% of income,Housing cost burden,pie_group,B25070_001E,housing_cost_burden
+B25070_009E,Rent 40-49.9% of income,Housing cost burden,pie_group,B25070_001E,housing_cost_burden
+B25070_010E,Rent 50% or more of income,Housing cost burden,pie_group,B25070_001E,housing_cost_burden
+B25024_001E,Units in structure - total,Units in structure,,,
+B25024_002E,1 unit detached,Units in structure,pie_group,B25024_001E,units_in_structure
+B25024_003E,1 unit attached,Units in structure,pie_group,B25024_001E,units_in_structure
+B25024_004E,2 units,Units in structure,pie_group,B25024_001E,units_in_structure
+B25024_005E,3 or 4 units,Units in structure,pie_group,B25024_001E,units_in_structure
+B25024_006E,5 to 9 units,Units in structure,pie_group,B25024_001E,units_in_structure
+B25024_007E,10 to 19 units,Units in structure,pie_group,B25024_001E,units_in_structure
+B25024_008E,20 to 49 units,Units in structure,pie_group,B25024_001E,units_in_structure
+B25024_009E,50 or more units,Units in structure,pie_group,B25024_001E,units_in_structure
+B25034_001E,Year built - total,Year structure built,,,
+B25034_002E,Built 2020 or later,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_003E,Built 2010 to 2019,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_004E,Built 2000 to 2009,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_005E,Built 1990 to 1999,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_006E,Built 1980 to 1989,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_007E,Built 1970 to 1979,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_008E,Built 1960 to 1969,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_009E,Built 1950 to 1959,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_010E,Built 1940 to 1949,Year structure built,pie_group,B25034_001E,year_structure_built
+B25034_011E,Built 1939 or earlier,Year structure built,pie_group,B25034_001E,year_structure_built
+B25002_001E,Occupancy - total housing units,Occupancy,,,
+B25002_002E,Occupied units,Occupancy,count|proportion,B25002_001E,
+B25002_003E,Vacant units,Occupancy,count|proportion,B25002_001E,
+B25010_001E,Average household size,Household size,raw,,
