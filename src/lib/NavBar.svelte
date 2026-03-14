@@ -1,11 +1,13 @@
 <script lang="ts">
+  import { dataUrl } from './basePath.js'
+
   /** Current page for active link styling. */
   export let currentPage: 'main' | 'interactive' = 'main'
 </script>
 
 <nav class="navbar">
-  <a href="/" class:active={currentPage === 'main'}>PNG Viewer</a>
-  <a href="/interactive" class:active={currentPage === 'interactive'}>Interactive D3</a>
+  <a href={dataUrl('/')} class:active={currentPage === 'main'}>PNG Viewer</a>
+  <a href={dataUrl('/interactive')} class:active={currentPage === 'interactive'}>Interactive D3</a>
 </nav>
 
 <style>

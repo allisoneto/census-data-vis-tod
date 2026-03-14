@@ -4,6 +4,7 @@
  */
 
 import type { Manifest, ManifestVariable, SelectionState, VisualizationSpec } from '../../manifest.js'
+import { dataUrl } from '../../basePath.js'
 
 const BASE = '/output'
 
@@ -24,23 +25,23 @@ export function getImagePath(
       // Boston zoom PNGs live in boston_zoom subfolder; whole area at transform level
       const extent = selection.extent ?? 'whole'
       const extentDir = extent === 'boston' ? 'boston_zoom/' : ''
-      return `${BASE}/maps/${source}/${humanName}/${transform}/${extentDir}${source}_${variable}_${transform}_${year}.png`
+      return dataUrl(`${BASE}/maps/${source}/${humanName}/${transform}/${extentDir}${source}_${variable}_${transform}_${year}.png`)
     }
     case 'pie_chart': {
       const group = variable
       const humanGroup = humanReadableDirName(variableLabel)
-      return `${BASE}/pie_charts/${source}/${humanGroup}/${group}_agg_5geoids_${year}.png`
+      return dataUrl(`${BASE}/pie_charts/${source}/${humanGroup}/${group}_agg_5geoids_${year}.png`)
     }
     case 'bar_chart': {
-      return `${BASE}/bar_charts/${source}/${variable}_n5geoids_${year}.png`
+      return dataUrl(`${BASE}/bar_charts/${source}/${variable}_n5geoids_${year}.png`)
     }
     case 'stacked_bar': {
       const humanGroup = humanReadableDirName(variableLabel)
-      return `${BASE}/stacked_bar_charts/${source}/${humanGroup}/${variable}_n5geoids_${year}.png`
+      return dataUrl(`${BASE}/stacked_bar_charts/${source}/${humanGroup}/${variable}_n5geoids_${year}.png`)
     }
     case 'scatter': {
       const humanName = humanReadableDirName(variableLabel)
-      return `${BASE}/scatter_plots/${source}/${humanName}/${transform}/overlap_total_vs_${variable}_${year}.png`
+      return dataUrl(`${BASE}/scatter_plots/${source}/${humanName}/${transform}/overlap_total_vs_${variable}_${year}.png`)
     }
     default:
       return ''

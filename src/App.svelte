@@ -6,6 +6,7 @@
   import VariableTransformReference from './lib/VariableTransformReference.svelte'
   import Disclaimer from './lib/Disclaimer.svelte'
   import type { Manifest } from './lib/manifest.js'
+  import { dataUrl } from './lib/basePath.js'
 
   /** Mount point for D3. */
   let container: HTMLDivElement | undefined = undefined
@@ -16,7 +17,7 @@
   /** Load manifest and set initial selection. */
   onMount(async () => {
     try {
-      const res = await fetch('/manifest.json')
+      const res = await fetch(dataUrl('/manifest.json'))
       manifest = (await res.json()) as Manifest
       const initial = getInitialSelection(manifest)
       selection.set(initial)

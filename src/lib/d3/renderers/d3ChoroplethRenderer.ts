@@ -6,6 +6,7 @@
 
 import * as d3 from 'd3'
 import type { SelectionState } from '../../manifest.js'
+import { dataUrl } from '../../basePath.js'
 import { renderTimeSeriesLine, type TimeSeriesData } from './d3TimeSeriesLine.js'
 
 const TRANSITION_MS = 150
@@ -182,7 +183,7 @@ async function loadMetadata(selection: SelectionState): Promise<BlockGroupMetada
 }
 
 async function fetchJson<T>(url: string): Promise<T> {
-  const res = await fetch(url)
+  const res = await fetch(dataUrl(url))
   if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`)
   const text = await res.text()
   try {

@@ -7,7 +7,12 @@ const config = {
 	kit: {
 		adapter: adapter({ fallback: '404.html' }),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH,
+			// GitHub Pages: BASE_PATH=/repo-name. Must start with /, must not end with /.
+			base: (() => {
+				if (process.argv.includes('dev')) return ''
+				const b = String(process.env.BASE_PATH ?? '').trim().replace(/\/+$/, '')
+				return b && b.startsWith('/') ? b : ''
+			})(),
 		},
 	},
 };
