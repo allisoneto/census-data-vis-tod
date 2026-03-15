@@ -1,7 +1,7 @@
 <!-- Disclaimer banner shown on all pages. Flows with document (static, not sticky). -->
 
 <div class="disclaimer">
-  DISCLAIMER: This site is vibe-coded for short-term research purposes, and is still in development
+  DISCLAIMER: This site is still under development, and may contain errors, inaccuracies, or other issues.
 </div>
 
 <style>
